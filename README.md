@@ -1,9 +1,11 @@
-# DEX
+# Swadex crypto DEX
 
 This is a DEX ispired by [this design](https://www.figma.com/community/file/967630892045389378)
 DEX is using [1inch API](https://portal.1inch.dev/) to perfom swaps
 [Moralis API](https://docs.moralis.io/) is used to get balances of tokens in Wallet
 [Alchemy API](https://dashboard.alchemy.com/) is used to get native token balance
+
+By default DEX is set to work with Polygon Network
 
 In order to run backend:
 1. Navigate to `crypto-dex-be`
