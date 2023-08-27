@@ -1,0 +1,81 @@
+
+.swap-settings-form {
+    position: absolute;
+    top: 18%;
+    right: 2rem;
+    z-index: 2;
+    border-radius: 0.5rem;
+    background: #f8f8f9b1;
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 0 0 10px 5px #e0e0e1;
+}
+
+.slippage-setting-container, .deadline-setting-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.slippage-setting-title, .deadline-setting-title {
+    color: var(--gray-14, #636A7E);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.slippage-setting-options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.slippage-option {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.slippage-option.radio {
+    background-color: #F4F4F6;
+}
+
+.slippage-option.radio:hover {
+    cursor: pointer;
+}
+
+.slippage-option.custom {
+    border: none;
+}
+
+.slippage-option.custom:focus {
+    outline: none;
+}
+
+.deadline-setting-input-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.deadline-setting-input {
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem;
+}
+
+.deadline-setting-input:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .swap-settings-form {
+        width: 90vw;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+}
