@@ -16,3 +16,5 @@ In order to run frontend:
 2. Copy .env.example to .env and add your values
 3. Run ```npm i```
 4. Run ```npm run dev```
+
+<img width="809" alt="image" src="https://github.com/aveandrian/swadex-crypto-dex/assets/13519212/100d720d-4292-4984-93bf-65971831d0fa">
