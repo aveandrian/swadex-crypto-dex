@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
-import { useAccount, useConnect, useDisconnect, useBalance } from "wagmi";
+import {
+  useAccount,
+  useConnect,
+  useDisconnect,
+  useBalance,
+  useNetwork,
+  useSwitchNetwork,
+} from "wagmi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faClose,
@@ -19,6 +26,9 @@ export default function Navbar() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
+
+  const { chain } = useNetwork();
+  const { switchNetwork } = useSwitchNetwork();
 
   function toggleMobileMenu() {
     setIsMobileMenuOpened((prev) => !prev);
@@ -163,6 +173,18 @@ export default function Navbar() {
         </div>
       )}
       {isLoading && <div className="loading-modal">Connecting...</div>}
+      {chain && chain.id !== 137 && (
+        <div className="loading-modal">
+          <p>The currently selected chain is not Polygon</p>
+          <button
+            className="switch-network-btn"
+            disabled={!switchNetwork}
+            onClick={() => switchNetwork(137)}
+          >
+            Switch to Polygon mainnet
+          </button>
+        </div>
+      )}
     </>
   );
 }
